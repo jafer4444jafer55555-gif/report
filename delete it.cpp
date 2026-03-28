@@ -56,6 +56,12 @@ public:
             cout << "PASS" << endl;
         }
         cout << "------------------------------" << endl;
+        
+        if (average >= 50) {
+            cout << "Keep it up! You are doing great." << endl;
+        } else {
+            cout << "Don't give up! Try harder next time." << endl;
+        }
     }
 };
 
