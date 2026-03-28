@@ -38,8 +38,14 @@ public:
     }
 
     void displayResult() {
+        
         cout << "\n------------------------------" << endl;
-        cout << "      STUDENT REPORT CARD      " << endl;
+        cout << "      STUDENT REPORT CARD      " << endl;int lowestIndex = 0; 
+        for (int i = 1; i < 6; i++) {
+            if (grades[i] < grades[lowestIndex]) {
+                lowestIndex = i; 
+            }
+        }
         cout << "------------------------------" << endl;
         cout << "Name           : " << studentName << endl;
         cout << "Total Marks    : " << total << "/600" << endl;
@@ -54,6 +60,7 @@ public:
             cout << "EXCELLENT (Honors List)" << endl;
         } else {
             cout << "PASS" << endl;
+            cout << "Attention Needed (Lowest): " << subjects[lowestIndex] << " (" << grades[lowestIndex] << ")" << endl;
         }
         cout << "------------------------------" << endl;
         
